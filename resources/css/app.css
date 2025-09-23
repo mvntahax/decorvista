@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- CSS Variables ---------- */
+:root {
+    /* Backgrounds */
+    --ivory: #fdfbf7; /* soft ivory (base background) */
+    --beige: #f5f1eb; /* soft beige (secondary background) */
+    --white: #ffffff; /* pure white (optional highlight areas) */
+
+    /* Text Colors */
+    --charcoal: #18181b; /* primary text color */
+    --slate-gray: #52525b; /* secondary text color */
+    --zinc-gray: #71717a; /* muted/placeholder text */
+
+    /* Neutrals / UI Elements */
+    --midnight: #27272a; /* dark surfaces (headers/navs) */
+    --light-gray: #e4e4e7; /* borders, outlines */
+    --hover-gray: #3f3f46; /* hover states */
+}
+
+/* ---------- Base Styles ---------- */
+body {
+    font-family: "Spline Sans", sans-serif;
+    background-color: var(--ivory);
+    scroll-behavior: smooth;
+}
+
+/* ---------- Background Utilities ---------- */
+.bg-midnight { background-color: var(--midnight); }
+.bg-ivory { background-color: var(--ivory); }
+.bg-beige { background-color: var(--beige); }
+.bg-white { background-color: var(--white); }
+.light-gray { background-color: var(--light-gray); }
+.hover-gray { background-color: var(--hover-gray); }
+
+/* ---------- Text Utilities ---------- */
+.text-charcoal { color: var(--charcoal); }
+.text-slate-gray { color: var(--slate-gray); }
+.text-zinc-gray { color: var(--zinc-gray); }
+.text-ivory { color: var(--ivory); }
+
+/* ---------- Border Utilities ---------- */
+.midnight { border-color: var(--midnight); }
+.light-gray { border-color: var(--light-gray); }
+.hover-gray { border-color: var(--hover-gray); }
+
+/* ---------- Input Focus States ---------- */
+input:focus,
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important; /* removes Tailwind's default focus ring */
+}
+
+/* ---------- Animations ---------- */
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply slide-up animation */
+.animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+}
