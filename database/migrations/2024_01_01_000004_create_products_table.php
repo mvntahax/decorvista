@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained('products_category')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained('product_categories')->onDelete('cascade');
             $table->string('name', 150);
             $table->decimal('price', 10, 2)->default(0);
             $table->string('image')->nullable();
