@@ -22,7 +22,7 @@ class ProfileController extends Controller
     }
 
     // Update the logged-in user's profile information
-    public function update(Request $request): RedirectResponse
+    public function update(Request $request)
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255', 'regex:/^[a-zA-Z\s]+$/'],
