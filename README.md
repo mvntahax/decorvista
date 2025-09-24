@@ -4,7 +4,7 @@ A modern **Laravel + MySQL based interior design & e-commerce web application** 
 
 This project includes **user authentication**, **design browsing with categories**, **saved designs (wishlist)**, **shopping cart**, and **consultation booking** with designers.
 
-![demo1](demo.gif)
+![demo](demo.gif)
 
 Live Project: [https://decorvista.ct.ws](https://decorvista.ct.ws)
 
